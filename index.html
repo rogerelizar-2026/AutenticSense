@@ -37,7 +37,9 @@
     }
     html { background: var(--bg); color: var(--text); }
     body { margin: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    #root { min-height: 100vh; }
+    #root { min-height: 100vh; display: block; }
+    /* Garantir que o conteúdo seja visível */
+    * { box-sizing: border-box; }
   </style>
 </head>
 <body>

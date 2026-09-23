@@ -16,15 +16,17 @@ function getSectionFromHash(): Section {
 }
 
 export default function App() {
+  console.log('App renderizando...');
   const [section, setSection] = useState<Section>(getSectionFromHash);
   const [showWelcome, setShowWelcome] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
-  const mainRef = useRef<HTMLElement>(null);
 
   // Theme management
   const [systemDark, setSystemDark] = useState(() => 
     typeof window !== 'undefined' ? window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false : false
   );
+  
+  console.log('Estado:', { section, showWelcome, theme, systemDark });
 
   useEffect(() => {
     const saved = localStorage.getItem('osa-theme') as 'light' | 'dark' | 'system' | null;
@@ -67,7 +69,14 @@ export default function App() {
   const isDark = theme === 'dark' || (theme === 'system' && systemDark);
 
   return (
-    <div className={`min-h-screen transition-colors duration-200 ${isDark ? 'bg-dark-bg text-dark-ink' : 'bg-paper text-ink'}`}>
+    <div 
+      style={{ 
+        minHeight: '100vh', 
+        display: 'block',
+        backgroundColor: isDark ? '#1A2530' : '#FBFAF7',
+        color: isDark ? '#F0EDE6' : '#1A2530'
+      }}
+    >
       <a href="#main-content" className="skip-link">Pular para o conteúdo principal</a>
 
       {/* Header */}
@@ -93,7 +102,7 @@ export default function App() {
       </header>
 
       {/* Main Content */}
-      <main id="main-content" ref={mainRef} className="pb-20 md:pb-8" tabIndex={-1}>
+      <main id="main-content" className="pb-20 md:pb-8" tabIndex={-1} style={{ display: 'block' }}>
         {section === 'home' && <Home navigate={navigate} isDark={isDark} />}
         {section === 'hebrew' && <HebrewSection isDark={isDark} />}
         {section === 'greek' && <GreekSection isDark={isDark} />}
