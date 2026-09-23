@@ -36,8 +36,8 @@ export function Home({ navigate, isDark }: HomeProps) {
 
         {/* Scripture preview */}
         <div className={`mt-8 p-4 rounded-xl ${isDark ? 'bg-dark-surface' : 'bg-surface'}`}>
-          <p className="text-hebrew text-2xl mb-2" lang="he" dir="rtl">בְּרֵאשִׁית בָּרָא אֱלֹהִים</p>
-          <p className="text-greek text-xl" lang="grc">Ἐν ἀρχῇ ἦν ὁ λόγος</p>
+          <p className="script-hebrew text-2xl mb-2" lang="he" dir="rtl">בְּרֵאשִׁית בָּרָא אֱלֹהִים</p>
+          <p className="script-greek text-xl" lang="grc">Ἐν ἀρχῇ ἦν ὁ λόγος</p>
         </div>
 
         {/* CTA */}

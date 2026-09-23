@@ -37,7 +37,7 @@ export function GreekSection({ isDark }: Props) {
     <div className="max-w-4xl mx-auto px-4 py-6 md:py-8 md:ml-60" id="grk-portal">
       {/* Header */}
       <header className="mb-8">
-        <p className="text-greek text-2xl mb-3 text-center" lang="grc">Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν</p>
+        <p className="script-greek text-2xl mb-3 text-center" lang="grc">Ἐν ἀρχῇ ἦν ὁ λόγος, καὶ ὁ λόγος ἦν πρὸς τὸν θεόν</p>
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-2" style={{ fontFamily: 'var(--font-display)' }}>
           Grego Koiné
         </h1>
@@ -77,15 +77,15 @@ export function GreekSection({ isDark }: Props) {
             </p>
             <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-3">
               <div className={`p-3 rounded-lg ${isDark ? 'bg-white/5' : 'bg-paper'}`}>
-                <div className="text-2xl font-bold text-greek">25</div>
+                <div className="text-2xl font-bold text-portal">25</div>
                 <div className={`text-xs ${textSec}`}>Métodos Analisados</div>
               </div>
               <div className={`p-3 rounded-lg ${isDark ? 'bg-white/5' : 'bg-paper'}`}>
-                <div className="text-2xl font-bold text-greek">Foco</div>
+                <div className="text-2xl font-bold text-portal">Foco</div>
                 <div className={`text-xs ${textSec}`}>Morfologia + Sintaxe Exegética</div>
               </div>
               <div className={`p-3 rounded-lg ${isDark ? 'bg-white/5' : 'bg-paper'}`}>
-                <div className="text-2xl font-bold text-greek">60min</div>
+                <div className="text-2xl font-bold text-portal">60min</div>
                 <div className={`text-xs ${textSec}`}>Rotina Diária Recomendada</div>
               </div>
             </div>
@@ -116,11 +116,11 @@ export function GreekSection({ isDark }: Props) {
             <h2 className="text-lg font-bold mb-3">Mounce vs. Wallace: A Diferença Crucial</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className={`p-4 rounded-lg ${isDark ? 'bg-white/5' : 'bg-paper'}`}>
-                <h3 className="font-semibold text-sm text-greek mb-2">Mounce / Rega — Morfologia</h3>
+                <h3 className="font-semibold text-sm mb-2">Mounce / Rega — Morfologia</h3>
                 <p className={`text-sm ${textSec}`}>Responde ao <em>"O que é"</em>. Ensina desinências, declinações, classificação de tempos verbais. Excelente para as semanas 1-20 (Nível 1-3).</p>
               </div>
               <div className={`p-4 rounded-lg ${isDark ? 'bg-white/5' : 'bg-paper'}`}>
-                <h3 className="font-semibold text-sm text-greek mb-2">Wallace — Sintaxe Exegética</h3>
+                <h3 className="font-semibold text-sm mb-2">Wallace — Sintaxe Exegética</h3>
                 <p className={`text-sm ${textSec}`}>Responde ao <em>"Por que importa teologicamente"</em>. Explica o impacto exegético de um aoristo ingressivo ou um genitivo de posse. Ideal para semanas 21+ (Nível 4-5).</p>
               </div>
             </div>
@@ -153,7 +153,7 @@ export function GreekSection({ isDark }: Props) {
                     <tr key={i} className={isDark ? 'border-b border-white/5' : 'border-b border-gold/10'}>
                       <td className="py-2 px-2 font-bold">{r.pos}º</td>
                       <td className={`py-2 px-2 ${textSec}`}>{r.name}</td>
-                      <td className="py-2 px-2 font-semibold text-greek">{r.score}</td>
+                      <td className="py-2 px-2 font-semibold text-portal">{r.score}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -295,7 +295,7 @@ const levels = [
   { title: 'Nível 2 — Básico', duration: '12 semanas', objective: 'Sistema Nominal + Presente do Indicativo', objectives: ['Dominar sistema nominal completo (declinações e casos)', 'Compreender uso exegético do artigo grego', 'Aprender três classes de declinação de substantivos', 'Conjugar verbos regulares e εἰμί no Presente', 'Expandir vocabulário para 600 palavras'], strategies: ['Consolidação Nominal com Rega: declinações sequenciais', 'Parsing Ativo de 1João: identificar cada caso e justificar', 'Notebook Gemini: "Tutor de Casos" com termos reais do NT'], checkpoint: ['Identificar substantivos das 3 declinações com 85% de precisão', 'Diferenciar Acusativo (objeto direto) do Dativo (objeto indireto)', 'Vocabulário ativo de 600 palavras'] },
   { title: 'Nível 3 — Intermediário', duration: '16 semanas', objective: 'Sistema Verbal + Particípios e Infinitivos', objectives: ['Dominar sistema verbal completo (todos os tempos no Indicativo)', 'Compreender as três Vozes (Ativa, Média, Passiva) e depoência', 'Dominar morfologia de Particípios e Infinitivos', 'Diferenciar Aspecto Verbal de Tempo Linear', 'Vocabulário de 1.200 palavras'], strategies: ['Segredo dos Radicais Verbais com Mounce: lógica de formação', 'Domínio de Particípios: sufixo -ντ- + declinação', 'Notebook Gemini: "Simulador de Parsing Verbal"'], checkpoint: ['Parsing morfológico de verbos e particípios com 90% de acerto', 'Traduzir 1João completa com uso mínimo de léxicos', 'Diferenciar Aoristo (pontual) do Presente (contínuo)'] },
   { title: 'Nível 4 — Avançado', duration: '20 semanas', objective: 'Sintaxe Exegética de Wallace + Exegese', objectives: ['Dominar Sintaxe Grega Exegética avançada', 'Compreender nuances de disputas clássicas (Wallace)', 'Dominar Aspecto Verbal exegético do Aoristo e Perfeito', 'Conhecimento de crítica textual e parsing avançado', 'Exegeses de Romanos e Gálatas'], strategies: ['Análise Sintática Sistemática de Casos com Wallace', 'Estudo de Casos Teológicos Chaves: Gálatas 2:16, Romanos 3:22', 'Notebook Gemini: "Mentor de Sintaxe Exegética"'], checkpoint: ['Exegese sintática completa de perícope fundamentada em Wallace', 'Identificar genitivo subjetivo/objetivo com fundamentação', 'Vocabulário passivo de 2.500+ termos do GNT'] },
-  { title: 'Nível 5 — Fluência', duration: 'Contínuo', objective: 'Leitura fluida + LXX + Pesquisa', objectives: ['Leitura direta de livros inteiros do NT sem dicionários', 'Expandir para Septuaginta e Pais Apostólicos', 'Análises acadêmicas de filologia semítica e helenística', 'Ensinar e mentorar novos estudantes'], strategies: ['Leitura Extensiva Diária: 1 capítulo/dia', 'Exegese Comparada: LXX vs Texto Massorético', 'Notebook Gemini: análise de desvios semânticos LXX→MT'], checkpoint: ['Ler 1 capítulo do NT grego em 15 min com compreensão total', 'Identificar background semântico de citações LXX no GNT', 'Ensinar fundamentos morfológicos e sintáticos a novos estudantes'] },
+  { title: 'Nível 5 — Fluência', duration: 'Contínuo', objective: 'Leitura fluida + LXX + Pesquisa', objectives: ['Leitura direta de livros inteiros do NT sem dicionários', 'Expandir para Septuaginta e Pais da Igreja', 'Análises acadêmicas de filologia semítica e helenística', 'Ensinar e mentorar novos estudantes'], strategies: ['Leitura Extensiva Diária: 1 capítulo/dia', 'Exegese Comparada: LXX vs Texto Massorético', 'Notebook Gemini: análise de desvios semânticos LXX→MT'], checkpoint: ['Ler 1 capítulo do NT grego em 15 min com compreensão total', 'Identificar background semântico de citações LXX no GNT', 'Ensinar fundamentos morfológicos e sintáticos a novos estudantes'] },
 ];
 
 const freeResources = [

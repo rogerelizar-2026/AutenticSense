@@ -76,15 +76,15 @@ body {
   top: 0;
 }
 
-/* Hebrew/Greek text */
-.text-hebrew {
+/* Hebrew/Greek text - using 'script-' prefix to avoid Tailwind color conflicts */
+.script-hebrew {
   font-family: var(--font-hebrew);
   direction: rtl;
   unicode-bidi: isolate;
   line-height: 2;
 }
 
-.text-greek {
+.script-greek {
   font-family: 'Gentium Plus', 'SBL Greek', 'Times New Roman', serif;
   unicode-bidi: isolate;
 }
