@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="O Sentido Autêntico — Estudo de Hebraico, Aramaico e Grego Koiné bíblicos. Currículo completo de 5 níveis, 25 métodos analisados, recursos curados e metodologia com IA. Curadoria: Rogério Ramão Lopes." />
+  <meta name="author" content="Rogério Ramão Lopes" />
+  <meta name="theme-color" content="#0F3731" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#FBFAF7" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="O Sentido Autêntico — Estudos das Línguas Bíblicas" />
+  <meta property="og:description" content="Tecnologia e profundidade histórica para conectar você ao sestro original de Deus. Hebraico, Aramaico e Grego Koiné." />
+  <meta property="og:locale" content="pt_BR" />
+  
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="O Sentido Autêntico" />
+  
+  <title>O Sentido Autêntico — Estudos das Línguas Bíblicas</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* Critical CSS - prevent FOUC */
+    :root { --bg: #FBFAF7; --text: #1A2530; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1A2530; --text: #FBFAF7; }
+    }
+    html { background: var(--bg); color: var(--text); }
+    body { margin: 0; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    #root { min-height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
