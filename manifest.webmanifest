@@ -1,0 +1,19 @@
+{
+  "name": "O Sentido Autêntico — Estudo de Hebraico, Aramaico e Grego Koiné",
+  "short_name": "Sentido Autêntico",
+  "description": "Portal pt-BR para o estudo introdutório das línguas bíblicas: métodos, currículo de 5 níveis e catálogo de ferramentas.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "minimal-ui",
+  "orientation": "any",
+  "background_color": "#FBFAF7",
+  "theme_color": "#0F3731",
+  "icons": [
+    { "src": "assets/icons/app-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/app-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/app-icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
