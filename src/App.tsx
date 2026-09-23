@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Home } from './components/Home';
 import { HebrewSection } from './components/HebrewSection';
 import { GreekSection } from './components/GreekSection';
@@ -16,7 +16,6 @@ function getSectionFromHash(): Section {
 }
 
 export default function App() {
-  console.log('App renderizando...');
   const [section, setSection] = useState<Section>(getSectionFromHash);
   const [showWelcome, setShowWelcome] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
@@ -25,8 +24,6 @@ export default function App() {
   const [systemDark, setSystemDark] = useState(() => 
     typeof window !== 'undefined' ? window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false : false
   );
-  
-  console.log('Estado:', { section, showWelcome, theme, systemDark });
 
   useEffect(() => {
     const saved = localStorage.getItem('osa-theme') as 'light' | 'dark' | 'system' | null;
