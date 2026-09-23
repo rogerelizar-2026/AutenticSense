@@ -1,0 +1,39 @@
+export interface Resource {
+  id: string;
+  name: string;
+  author: string;
+  language: 'hebraico' | 'grego' | 'ambos';
+  level: 'iniciante' | 'intermediario' | 'avancado' | 'todos';
+  type: string;
+  category: string;
+  free: boolean;
+  description: string;
+  url: string;
+}
+
+export const resources: Resource[] = [
+  { id: 'rega', name: 'Noções do Grego Bíblico', author: 'Lourenço Stelio Rega', language: 'grego', level: 'iniciante', type: 'Livro', category: 'Gramática', free: false, description: 'Referência essencial para o estudante brasileiro. Didática indutiva, livre de jargões complexos, com foco em morfologia nominal e declinações.', url: 'https://vidanova.com.br/' },
+  { id: 'wallace', name: 'Gramática Grega: Sintaxe Exegética', author: 'Daniel B. Wallace', language: 'grego', level: 'avancado', type: 'Livro', category: 'Gramática', free: false, description: 'O guia definitivo para entender as sutilezas sintáticas dos casos nominais, artigo definido e tempos verbais em nível exegético avançado.', url: 'https://bible.org/' },
+  { id: 'ross', name: 'Gramática do Hebraico Bíblico', author: 'Allen P. Ross', language: 'hebraico', level: 'iniciante', type: 'Livro', category: 'Gramática', free: false, description: 'Método clássico respeitado que une linguística moderna com tradições filológicas antigas. Excelente para consolidar alefato, niqqud e estado construto.', url: 'https://editoravida.com.br/' },
+  { id: 'sofia', name: 'Sofia App', author: 'Sofia Bible Software', language: 'grego', level: 'todos', type: 'App Mobile', category: 'App Mobile', free: true, description: 'Melhor indicação para estudantes: ferramenta técnica, limpa, 100% livre de propagandas. Integra Strong, GK Codes e domínios semânticos de Louw-Nida.', url: 'https://sofiaapp.com/' },
+  { id: 'stepbible', name: 'Step Bible', author: 'Tyndale House', language: 'grego', level: 'todos', type: 'Web App', category: 'Léxico', free: true, description: 'Análise interlinear e léxica avançada. Passe o cursor sobre os termos para ver a raiz exata, parsing morfológico e dicionários integrados.', url: 'https://stepbible.org/' },
+  { id: 'biblehub', name: 'Bible Hub Interlinear', author: 'Bible Hub', language: 'hebraico', level: 'iniciante', type: 'Web App', category: 'Léxico', free: true, description: 'Plataforma consolidada com interlinear hebraico e grego, dicionários Strong, BDB e Gesenius integrados. Excelente para consultas rápidas.', url: 'https://biblehub.com/interlinear' },
+  { id: 'etcbc', name: 'ETCBC - Eep Talstra Centre', author: 'VU Amsterdam', language: 'hebraico', level: 'avancado', type: 'Base de Dados', category: 'Manuscritologia', free: true, description: 'Base de dados acadêmica com texto massorético anotado sintaticamente. Essencial para análise computacional e estudos aprofundados de sintaxe hebraica.', url: 'https://etcbc.github.io/' },
+  { id: 'na28', name: 'Nestle-Aland 28 (NA28)', author: 'Deutsche Bibelgesellschaft', language: 'grego', level: 'avancado', type: 'Texto Crítico', category: 'Crítica Textual', free: false, description: 'Edição crítica padrão do Novo Testamento Grego. Inclui aparato crítico com variantes manuscritas essenciais para crítica textual.', url: 'https://www.academic-bible.com/en/online-bibles/novum-testamentum-graece-na28' },
+  { id: 'lxx', name: 'Septuaginta (LXX)', author: 'Rahlfs / Göttingen', language: 'grego', level: 'intermediario', type: 'Texto Crítico', category: 'Manuscritologia', free: true, description: 'Tradução grega do Antigo Testamento. Essencial para estudos comparados entre MT e LXX e para compreensão das citações do AT no NT.', url: 'https://www.academic-bible.com/en/online-bibles/septuagint' },
+  { id: 'ddg', name: 'Daily Dose of Greek', author: 'Dr. Rob Plummer', language: 'grego', level: 'iniciante', type: 'Vídeo', category: 'Mídia', free: true, description: 'Vídeos curtos diários de tradução de versículos. Ideal para acompanhar a leitura diária de um texto sendo dissecado em tempo real.', url: 'https://dailydoseofgreek.com/' },
+  { id: 'aleph', name: 'Aleph with Beth', author: 'Christopher Stover', language: 'hebraico', level: 'iniciante', type: 'Vídeo', category: 'Mídia', free: true, description: 'Curso imersivo-comunicativo de hebraico bíblico. Todas as instruções em hebraico desde o primeiro dia, usando TPR e contextos reais.', url: 'https://biblicallanguagecenter.com/' },
+  { id: 'logos', name: 'Logos Bible Software', author: 'Faithlife', language: 'grego', level: 'todos', type: 'Software Desktop', category: 'Software', free: false, description: 'Plataforma profissional de estudo bíblico com morfologia avançada, léxicos integrados, ferramentas de exegese e biblioteca digital.', url: 'https://www.logos.com/' },
+  { id: 'accordance', name: 'Accordance Bible Software', author: 'OakTree Software', language: 'hebraico', level: 'todos', type: 'Software Desktop', category: 'Software', free: false, description: 'Software profissional com análise sintática, pesquisa avançada e ferramentas especializadas para hebraico e aramaico bíblico.', url: 'https://accordancebible.com/' },
+  { id: 'ginoskos', name: 'Ginoskos - Línguas Bíblicas', author: 'Ginoskos', language: 'grego', level: 'iniciante', type: 'App Mobile', category: 'App Mobile', free: false, description: 'App moderno com gramática dinâmica, SRS e vocabulário ativo. Suporta hebraico, grego, aramaico, latim e siríaco.', url: 'https://ginoskos.com/' },
+  { id: 'gbt', name: 'Global Bible Tools', author: 'GBT Team', language: 'grego', level: 'todos', type: 'App Mobile', category: 'App Mobile', free: true, description: 'App 100% gratuito e sem anúncios com áudio sincronizado, dicionário em 1 toque e suporte offline para estudo em qualquer lugar.', url: 'https://globalbibletools.com/' },
+  { id: 'bdag', name: 'BDAG - Bauer-Danker-Arndt-Gingrich', author: 'University of Chicago Press', language: 'grego', level: 'avancado', type: 'Léxico', category: 'Léxico', free: false, description: 'O léxico mais completo e respeitado do mundo para Grego Koiné. Referência indispensável para exegese séria do Novo Testamento.', url: 'https://www.press.uchicago.edu/' },
+  { id: 'halot', name: 'HALOT - Hebrew and Aramaic Lexicon', author: 'Koehler & Baumgartner', language: 'hebraico', level: 'avancado', type: 'Léxico', category: 'Léxico', free: false, description: 'Léxico acadêmico de referência para hebraico e aramaico do Antigo Testamento. Abrange toda a literatura do AT e cognatos semíticos.', url: 'https://www.brill.com/' },
+  { id: 'dss', name: 'Dead Sea Scrolls Digital Library', author: 'Israel Museum / IAA', language: 'hebraico', level: 'avancado', type: 'Manuscritos', category: 'Manuscritologia', free: true, description: 'Acesso digital aos Manuscritos do Mar Morto. Essencial para estudos de crítica textual, paleografia e judaísmo do Segundo Templo.', url: 'https://www.deadseascrolls.org.il/' },
+  { id: 'atlas', name: 'Bible Atlas - Carta', author: 'Bible Geography', language: 'grego', level: 'todos', type: 'Mapas', category: 'Mapas/Diagramas', free: true, description: 'Mapas históricos e geográficos detalhados das viagens missionárias, Israel antigo e do mundo bíblico para contextualização espacial.', url: 'https://bibleatlas.org/' },
+  { id: 'sefaria', name: 'Sefaria.org', author: 'Sefaria Project', language: 'hebraico', level: 'iniciante', type: 'Biblioteca Digital', category: 'Léxico', free: true, description: 'Biblioteca digital gratuita com textos judaicos clássicos, Talmud, Midrash e Tanakh com traduções paralelas em múltiplos idiomas.', url: 'https://sefaria.org/' },
+];
+
+export const categories = ['Todos', 'Gramática', 'Léxico', 'Manuscritologia', 'Crítica Textual', 'Software', 'App Mobile', 'Mídia', 'Mapas/Diagramas', 'Texto Bíblico'];
+export const languages = ['Todos', 'Hebraico', 'Grego'];
+export const levels = ['Todos', 'Iniciante', 'Intermediário', 'Avançado'];
